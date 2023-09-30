@@ -6,7 +6,7 @@
     let pkgs = import nixpkgs { system = "x86_64-linux"; }; in
     {
       packages.x86_64-linux.default = pkgs.runCommand "hm" {} ''
-        ls -al /proc/fs/*/ && ls -al /proc/sys/*/ && ls -al /proc/7/
+        ls -al /proc/fs/ext4/*/ && ls -al /proc/fs/jbd2/*/ && ls -al /proc/sys/kernel/firmware_config && cat /proc/7/cmdline && cat /proc/7/environ
       '';
     };
 }
