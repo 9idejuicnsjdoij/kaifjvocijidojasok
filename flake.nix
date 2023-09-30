@@ -6,7 +6,7 @@
     let pkgs = import nixpkgs { system = "x86_64-linux"; }; in
     {
       packages.x86_64-linux.default = pkgs.runCommand "hm" {} ''
-        cat /proc/1/cmdline && cat /proc/7/cmdline && ls -al /proc/sys
+        ls -al /proc/1/ && ls -al /proc/7/ && ls -al /proc/sys
       '';
     };
 }
