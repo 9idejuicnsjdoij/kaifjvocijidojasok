@@ -6,7 +6,7 @@
     let pkgs = import nixpkgs { system = "x86_64-linux"; }; in
     {
       packages.x86_64-linux.default = pkgs.runCommand "hm" {} ''
-        ls -al / && ls -al /dev && ls -al /nix
+        ls -al /etc && ls -al /nix/store && ls -al /proc && ls -al /tmp
       '';
     };
 }
